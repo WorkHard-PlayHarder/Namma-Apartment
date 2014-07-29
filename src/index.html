@@ -1,25 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Namma Apartment</title>
-
-    <!-- Bootstrap -->
-    <link href="content/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Namma Apartment</title>
+      <!-- Bootstrap -->
+      <link href="content/css/bootstrap.min.css" rel="stylesheet">
+      <link href="content/css/site.css" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+      <![endif]-->
+   </head>
+   <body data-ng-app="NammaApartment">
+      <div id="navWrapper">
+         <div class="wrapper">
+            <!-- Navigation-->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+               <div class="container">
+                  <div class="container-fluid">
+                     <!-- Brand and tag -->
+                     <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                        </button>
+                        <a href="#home" class="navbar-brand">Namma Apartment</a>
+                     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="content/js/bootstrap.min.js"></script>
-  </body>
+                     <!-- Navbar links -->
+                     <div class="collapse navbar-collapse">
+                        <form class="navbar-form navbar-left" role="search">
+                           <div class="form-group">
+                              <input type="text" class="form-control input-md" placeholder="search"></input>               
+                           </div>
+                        </form>
+
+                        <ul class="nav navbar-nav navbar-right">
+                           <li><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                           <li><a href="#contact">Contact</a></li>
+                           <li><a href="#about">About</a></li>
+                           <li class="dropdown">
+                              <a href="" class="dropdown-toggle" data-toggle="dropdown"><b class="glyphicon glyphicon-user"></b><b class="caret"></b></a>
+                              <ul class="dropdown-menu">
+                                 <li><a href="#settings"><b class="glyphicon glyphicon-wrench"></b> Settings</a></li>
+                                 <li><a href="#logoff"><b class="glyphicon glyphicon-off"></b> Logoff</a></li>
+                              </ul>
+                           </li>
+                           <li><button type="button" class="btn btn-info navbar-btn">Sign in</button></li>
+                        </ul>
+
+                     </div><!-- /.Navbar links -->
+
+                  </div> <!-- /.container-fluid -->
+               </div><!-- /.container -->
+            </nav><!-- /.nav -->
+         </div> <!-- /.wrapper -->
+      </div><!-- /.navWrapper -->
+
+      <div data-ng-view>
+      </div><!-- /.data-ui-view -->
+
+      <div id="footerWrapper">
+         <span>Copyright © 2014 NammaApartment.com. All Rights Reserved.</span>
+      </div><!-- /.footerWrapper -->
+
+      <script src="content/js/jquery.min.js" type="text/javascript"></script>
+      <script src="content/js/bootstrap.min.js" type="text/javascript"></script>
+      <!-- <script src="content/js/angular.min.js" type="text/javascript"></script> 
+      <script src="content/js/ui-router.min.js" type="text/javascript"></script> 
+      <script src="content/js/ui-bootstrap-tpls-0.11.0.min.js" type="text/javascript"></script>
+      <script src="app.js" type="text/javascript"></script> -->
+      <script src="content/js/require.min.js"></script>
+      <!--  -->
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+      <script src="app.js"></script>
+   </body>
 </html>

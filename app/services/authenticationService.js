@@ -6,10 +6,13 @@
      
       authenticationService.login = function (credentials) {
         return $http
-          .get('/users.json', credentials)
-          .then(function (res) {            
-            session.create(res.data.id, res.data.user.id, res.data.user.role);
-            return res.user;
+          .get('/data/users.json', credentials)
+          .then(function (res) { 
+            if(res.data.user.id == credentials.username)  {         
+              session.create(res.data.id, res.data.user.id, res.data.user.role);
+              return res.data.user;
+            }
+            return null;
           });
       };
 

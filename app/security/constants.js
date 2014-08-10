@@ -1,6 +1,6 @@
 (function() {
 	"use strict";
-	var app = angular.module('NammaApartment.security', [])
+	angular.module('NammaApartment.security', [])
 		.constant('AUTH_EVENTS', {
 			loginSuccess: 'auth-login-success',
 			loginFailed: 'auth-login-failed',

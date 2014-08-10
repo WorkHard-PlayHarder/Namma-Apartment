@@ -18,7 +18,7 @@
 		 $scope.logOff = function(){
 		 	$scope.currentUser = null;
 		 	authenticationService.logOff();
-		 	$location.path('/home');
+		 	$state.go('home');
 		};
 		 
 		$scope.setCurrentUser = function (user) {
@@ -31,12 +31,10 @@
 	    });
 
 	    $scope.$on(AUTH_EVENTS.notAuthenticated, function() {
-	    	console.log('notAuthenticated so redirecting to login');
 	    	$state.go('login');
 	    });
 
 	    $scope.$on(AUTH_EVENTS.notAuthorized, function() {
-	    	console.log('notAuthorized so redirecting to login');
 	    	$state.go('login');
 	    });
 

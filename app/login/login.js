@@ -1,4 +1,6 @@
 (function() {
+	"use strict";
+
 	angular.module('NammaApartment.login',['ui.router','NammaApartment.security'])
   	.config(['$stateProvider', function ($stateProvider) {
 	  $stateProvider.state('login', {
@@ -15,4 +17,5 @@
 	  });
 
 	}]);
+
 }());

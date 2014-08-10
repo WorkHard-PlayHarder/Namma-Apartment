@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-    angular.module('NammaApartment.security')
+  angular.module('NammaApartment.security')
     .factory('authenticationService', function ($http, session) {
       var authenticationService = {};
      
@@ -30,6 +30,6 @@
       };
      
       return authenticationService;
-    });
+  });
 
 }());

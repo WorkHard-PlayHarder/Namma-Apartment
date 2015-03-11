@@ -1,7 +1,8 @@
 (function() {
 	"use strict";
 	angular.module('NammaApartment')
-	  .controller('ApplicationController', function ($scope,$rootScope,$state, USER_ROLES, AUTH_EVENTS, authenticationService, $location) {
+	  .controller('ApplicationController', 
+	  	function ($scope,$rootScope,$state, USER_ROLES, AUTH_EVENTS, authenticationService, $location) {
 		
 		$scope.currentUser = null;
 		$scope.userRoles = USER_ROLES;

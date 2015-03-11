@@ -14,7 +14,12 @@
           }[response.status], response);
 
           return $q.reject(response);
+        },
+        //add authorization header for oAuth
+        request:function(config){
+
         }
+
       };
     });
     
